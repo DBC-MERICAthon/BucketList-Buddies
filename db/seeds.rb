@@ -43,11 +43,9 @@ Activity.create(name: 'Conquer Biggest Fear', description: Faker::Lorem.sentence
 Activity.create(name: 'Learn Sign Language', description: Faker::Lorem.sentence)
 Activity.create(name: 'Publish a Book', description: Faker::Lorem.sentence)
 Activity.create(name: 'Own a Pet', description: Faker::Lorem.sentence)
-Activity.create(name: 'Public Speaking', description: Faker::Lorem.sentence)
 Activity.create(name: 'Throw a Mega Party', description: Faker::Lorem.sentence)
 Activity.create(name: 'Get a Makeover', description: Faker::Lorem.sentence)
 Activity.create(name: 'Go on a Blind Date', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn an Instrument', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn a Martial Art', description: Faker::Lorem.sentence)
 Activity.create(name: 'Take up Dancing', description: Faker::Lorem.sentence)
-
