@@ -9,18 +9,19 @@
 require 'faker'
 
 10.times do
-  User.create(username: Faker::Internet.user_name,
+  User.create!(username: Faker::Internet.user_name,
             name: Faker::Name.name,
             location: Faker::Address.state,
             blurb: Faker::Lorem.paragraph,
             photo: 'profile_pic.png',
+            password: 'temppass',
             email: Faker::Internet.email)
 end
 
 Activity.create(name: 'Practice Meditation', description: Faker::Lorem.sentence)
 Activity.create(name: 'Reconnect with an Old Friend', description: Faker::Lorem.sentence)
 Activity.create(name: 'Go on a Picnic', description: Faker::Lorem.sentence)
-Activity.create(name: 'Fly First Class', description: Faker::Lorem.sentence)
+Activity.create(name: 'Fly Firstbin/ Class', description: Faker::Lorem.sentence)
 Activity.create(name: 'Go Skydiving', description: Faker::Lorem.sentence)
 Activity.create(name: 'Go on a Cruise', description: Faker::Lorem.sentence)
 Activity.create(name: 'Travel to a Different Country', description: Faker::Lorem.sentence)
