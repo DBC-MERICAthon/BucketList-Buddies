@@ -3,7 +3,7 @@ class CreateActivities < ActiveRecord::Migration
     create_table :activities do |t|
       t.string :name
       t.text :description
-      t.boolean :completed
+      t.boolean :completed, :default => false
 
       t.timestamps
     end
