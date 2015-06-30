@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150630213302) do
   create_table "activities", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "completed",   default: false
+    t.boolean  "completed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
