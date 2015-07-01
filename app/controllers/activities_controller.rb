@@ -19,8 +19,8 @@ class ActivitiesController < ApplicationController
     )
     if @activity.save
       current_user.activities << @activity
-      # redirect_to user_path(current_user)
-      render json: @activity.to_json
+      redirect_to user_path(current_user)
+      # render json: @activity.to_json
     end
   end
 
