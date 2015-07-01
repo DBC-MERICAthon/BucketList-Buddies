@@ -1,9 +1,5 @@
 <div class="matches-container">
-
-
   <div class="title">You match well with these folks:</div>
-
-
   <div class="buddy-container">
       <% @users_with_activities.each do |user, activities| %>
         <div class="buddy-bar">
@@ -14,7 +10,6 @@
             <div class="buddy-name"><%= user.name %></div>
             <div class="buddy-blurb"><%= user.blurb %></div>
           </div>
-
           <div class="activities-list">
             <ul>
               <% activities.each_with_index do |activity, index| %>
@@ -24,8 +19,5 @@
           </div>
         </div>
       <% end %>
-
   </div>
-
-
 </div>
