@@ -9,26 +9,27 @@
   <%end%>
 </ul>
 
-<div id='messagesDiv'></div>
-<input type='text' id='nameInput' placeholder='Name'>
-<input type='text' id='messageInput' placeholder='Message'>
-<script>
-  // We want to customize the reference url for each activity to enable group chat
-  var myFirebaseRef = new Firebase("https://dbc-bucket-buddies.firebaseio.com/activities/<%= @activity.id %>");
-  $('#messageInput').keypress(function (e) {
-    if (e.keyCode == 13) {
-      var name = $('#nameInput').val();
-      var text = $('#messageInput').val();
-      myFirebaseRef.push({name: name, text: text});
-      $('#messageInput').val('');
-    }
-  });
-  myFirebaseRef.on('child_added', function(snapshot) {
-    var message = snapshot.val();
-    displayChatMessage(message.name, message.text);
-  });
-  function displayChatMessage(name, text) {
-    $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  };
-</script>
+<div id='messagesDiv'>
+  <input type='text' id='nameInput' value='<%= current_user.name %>'>
+  <input type='text' id='messageInput' placeholder='Message'>
+  <script>
+    // We want to customize the reference url for each activity to enable group chat
+    var myFirebaseRef = new Firebase("https://dbc-bucket-buddies.firebaseio.com/activities/<%= @activity.id %>");
+    $('#messageInput').keypress(function (e) {
+      if (e.keyCode == 13) {
+        var name = $('#nameInput').val();
+        var text = $('#messageInput').val();
+        myFirebaseRef.push({name: name, text: text});
+        $('#messageInput').val('');
+      }
+    });
+    myFirebaseRef.on('child_added', function(snapshot) {
+      var message = snapshot.val();
+      displayChatMessage(message.name, message.text);
+    });
+    function displayChatMessage(name, text) {
+      $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+      $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+    };
+  </script>
+</div>

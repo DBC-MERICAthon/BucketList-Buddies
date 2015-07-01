@@ -17,6 +17,8 @@ body {
   color: #0b1021;
   margin: 0;
   padding: 0;
+  /*background-color: rgba(67,121,155, 0.3);*/
+
 }
 
 a {
@@ -34,24 +36,31 @@ a:active {
   color: #0000FF;
 }
 
+button#add_activity {
+  height: 50px;
+  font-size: 1.2em;
+  margin: 2% 0 2% 0;
+}
+form.new_activity {
+  margin: 2% 0 2% 0;
+}
+
 .main-container {
-  border: solid 1px red;
   width: 80%;
   margin-left: 10%;
   min-height: 1000px;
-  background-color: rgba(67,121,155, 0.3);
+  margin-top: 2%;
+  /*background-color: rgba(255, 152, 0, 0.25);*/
   position:relative;
 }
 
 .nav-bar {
-  border: solid 1px red;
   background-color: white;
   padding: 2% 2% 0 2%;
   display: block;
 }
 
 .login {
-  border: solid 1px red;
   text-align: center;
   line-height: 2em;
   padding: 2%;
@@ -82,10 +91,45 @@ a:active {
   font-size: 1.3em;
 }
 
+#messagesDiv {
+  width: 25%;
+  float: right;
+  /*display: block;*/
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+}
+
+.chat {
+  background-color: #FF9800;
+  color: white;
+  text-align: center;
+  padding: 1%;
+}
+
+.expand {
+  float: right;
+  margin-right: 2%;
+  font-size: 1.2em;
+}
+
+.chat-input-fields {
+  margin: 2%;
+  display: none;
+  min-height: 20%;
+}
+
+#nameInput {
+  width: 20%;
+  display: inline-block;
+}
+
+#messageInput {
+  width: 65%;
+}
 
 footer {
-  border: solid 1px red;
-  padding: 0 2% 2% 2%;
+    padding: 0 2% 2% 2%;
   /*position: absolute;*/
   bottom: 0;
   height: 100px;
