@@ -3,10 +3,21 @@
   width: 20%;
 }
 
-.body {
-  background-color: red;
-}
-
 .activity {
   border: 1px red dotted;
+}
+
+.nav_bar {
+  display: inline-block;
+  background-color: gray;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 10%;
+  width: 10%;
+  margin: 0%;
 }
