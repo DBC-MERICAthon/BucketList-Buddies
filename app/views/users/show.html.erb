@@ -1,17 +1,13 @@
-<%= link_to :logout, destroy_user_session_path, method: :delete %>
-<div class="profile">
-  <h1>Welcome, <%= @user.username %></h1>
-  <img class="profile_pic" src=<%= @user.photo %>>
-</div>
-
-<div class="bucket_list">
-  <h1>Bucket List:</h1>
-  <% @user_activities.each do |activity| %>
-    <div class="activity">
-      <p><%= link_to activity.name, activity_path(activity) %></p>
-      <p><%= activity.description %></p>
-    </div>
-  <% end %>
+<div class="bucket-list">
+  <div class="title">Your bucket list:</div>
+  <div class="all-activities">
+    <% @user_activities.each do |activity| %>
+      <div class="activity">
+        <p class="activity-name"><%= link_to activity.name, activity_path(activity) %></p>
+        <p class="activity-description"><%= activity.description.capitalize %></p>
+      </div>
+    <% end %>
+  </div>
   <% if current_user.id == @user.id %>
     <button id="add_activity">Add item</button>
 
@@ -26,3 +22,27 @@
     <% end %>
   <% end %>
 </div>
+
+<div id='messagesDiv'></div>
+<input type='text' id='nameInput' placeholder='Name'>
+<input type='text' id='messageInput' placeholder='Message'>
+<script>
+  // We want to customize the reference url for each activity to enable group chat
+  var myFirebaseRef = new Firebase("https://dbc-bucket-buddies.firebaseio.com/user/<%= @user.id %>");
+  $('#messageInput').keypress(function (e) {
+    if (e.keyCode == 13) {
+      var name = $('#nameInput').val();
+      var text = $('#messageInput').val();
+      myFirebaseRef.push({name: name, text: text});
+      $('#messageInput').val('');
+    }
+  });
+  myFirebaseRef.on('child_added', function(snapshot) {
+    var message = snapshot.val();
+    displayChatMessage(message.name, message.text);
+  });
+  function displayChatMessage(name, text) {
+    $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+  };
+</script>

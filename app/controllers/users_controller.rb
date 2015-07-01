@@ -20,28 +20,15 @@ class UsersController < ApplicationController
       user_activities.each do |user_activity| #get users which share
         this_user_obj = User.find(user_activity.user_id)
         this_activity_obj = Activity.find(user_activity.activity_id)
-        if !(users_with_activities.has_key?(this_user_obj))
-          users_with_activities[this_user_obj] = [ this_activity_obj]
-          puts "&" * 100
-          puts "users_with_activities, name: #{this_user_obj.username}, activity: #{users_with_activities[this_user_obj][0].name}"
-        elsif !(users_with_activities[this_user_obj].include?(this_activity_obj))
-          puts "*" * 100
-          puts "users_with_activities, name: #{this_user_obj.username}, activity: #{users_with_activities[this_user_obj][0].name}"
-          users_with_activities[this_user_obj] += [this_activity_obj]
+        if !(@users_with_activities.has_key?(this_user_obj))
+          @users_with_activities[this_user_obj] = [ this_activity_obj]
+        elsif !(@users_with_activities[this_user_obj].include?(this_activity_obj))
+          @users_with_activities[this_user_obj] += [this_activity_obj]
         end
-
       end
     end
-
-
-    #   get all users with that activity from user_activities
-
-    #   if user is not in hash, add user and array containing activity
-    #   otherwise push activity into value array of user used as key
-
-    users_with_activity= user_activities.where(activity_id: 1)
-
   end
+
 end
 
 

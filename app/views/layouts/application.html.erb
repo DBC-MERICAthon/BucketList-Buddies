@@ -6,10 +6,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Monofett|Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="main-container">
+    <%= render "partials/header" %>
 
-<%= yield %>
-
+    <%= yield %>
+    <%= render "partials/footer" %>
+  </div>
 </body>
 </html>

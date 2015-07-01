@@ -1,0 +1,95 @@
+/* FONTS */
+/*font-family: 'Ubuntu', sans-serif;
+font-family: 'Monofett', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;*/
+
+/* COLORS */
+/* dark blue #3e4b69 */
+/* light blue #6b9fbf */
+/* super dark blue #0b1021 */
+
+h1 {
+  font-size: 3em;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #0b1021;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3e4b69;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #6b9fbf;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
+.main-container {
+  border: solid 1px red;
+  width: 80%;
+  margin-left: 10%;
+  min-height: 1000px;
+  background-color: rgba(67,121,155, 0.3);
+  position:relative;
+}
+
+.nav-bar {
+  border: solid 1px red;
+  background-color: white;
+  padding: 2% 2% 0 2%;
+  display: block;
+}
+
+.login {
+  border: solid 1px red;
+  text-align: center;
+  line-height: 2em;
+  padding: 2%;
+  display: block;
+  padding-top: 15%;
+}
+
+.welcome {
+  float: right;
+  display: block;
+  margin-top: 3%;
+}
+
+.greeting {
+  display: block;
+  float: right;
+}
+
+.login-buttons {
+  background:rgba(255,255,255, 0.4);
+  border-radius: 25px;
+  width: 18%;
+  padding: 2% 1% 2% 1%;
+  margin-left: 40%;
+}
+
+.home-login-buttons {
+  font-size: 1.3em;
+}
+
+
+footer {
+  border: solid 1px red;
+  padding: 0 2% 2% 2%;
+  /*position: absolute;*/
+  bottom: 0;
+  height: 100px;
+  width: 96%;
+  display: block;
+  background-color: white;
+}
