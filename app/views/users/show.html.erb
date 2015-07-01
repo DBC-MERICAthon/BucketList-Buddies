@@ -14,7 +14,7 @@
       </div>
     <% end %>
     <% @completed_activities.each do |useractivity| %>
-      <div class="completed-activity">
+      <div class="completed-activity activity">
         <p class="activity-name"><%= link_to useractivity.activity.name, activity_path(useractivity.activity) %>
           <% if current_user.id == @user.id %>
             <%= link_to "✖️", destroy_path(useractivity), method: :delete, class: "x" %></p>
@@ -25,6 +25,7 @@
   </div>
   <% if current_user.id == @user.id %>
     <button id="add_activity">Add item</button>
+    <a href="/users/matches"><button id="match">Match!</button></a>
 
     <%= form_for @activity, url: activities_path do |f| %>
       <%= f.label :name %>

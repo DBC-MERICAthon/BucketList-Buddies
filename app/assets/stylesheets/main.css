@@ -41,6 +41,13 @@ button#add_activity {
   font-size: 1.2em;
   margin: 2% 0 2% 0;
 }
+
+#match {
+  height: 50px;
+  font-size: 1.2em;
+  margin: 2% 0 2% 0;
+}
+
 form.new_activity {
   margin: 2% 0 2% 0;
 }
