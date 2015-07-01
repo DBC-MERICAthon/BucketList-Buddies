@@ -24,6 +24,13 @@
   font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+.heart, .x, .check {
+  margin: 0 0.5% 0 0.5%;
+}
+.strikethrough {
+  font-style:
+}
+
 #new_activity {
   display: none;
 }
