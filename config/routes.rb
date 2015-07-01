@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -17,6 +18,9 @@ Rails.application.routes.draw do
   resources :users
   resources :activities
 
+  patch 'useractivities/:id' => 'useractivities#update', as: :useractivities
+  delete 'useractivities/:id' => 'useractivities#destroy', as: :destroy
+  post 'useractivities/:id' => 'useractivities#create', as: :new
 
   # Example resource route with options:
   #   resources :products do

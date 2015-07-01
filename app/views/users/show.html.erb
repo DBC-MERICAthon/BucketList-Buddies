@@ -1,14 +1,14 @@
 <div class="bucket-list">
-  <div class="title">Bucket List:</div>
+  <div class="title"><%= @user.name %>'s Bucket List:</div>
   <div class="all-activities">
     <% @noncompleted_activities.each do |useractivity| %>
       <div class="activity">
         <p class="activity-name"><%= link_to useractivity.activity.name, activity_path(useractivity.activity) %>
           <% if current_user.id == @user.id %>
-            <span class="check">✔️</span>
-            <span class="x">✖️</span></p>
+            <%= link_to "✔️", useractivities_path(useractivity), method: :patch, class: "check" %>
+            <%= link_to "✖️", destroy_path(useractivity), method: :delete, class: "x" %></p>
           <% else %>
-            <span class="heart">😍</span></p>
+            <%= link_to "😍", new_path(useractivity), method: :post, class: "heart" %></p>
           <% end %>
         <p class="activity-description"><%= useractivity.activity.description.capitalize %></p>
       </div>
@@ -17,7 +17,7 @@
       <div class="completed-activity">
         <p class="activity-name"><%= link_to useractivity.activity.name, activity_path(useractivity.activity) %>
           <% if current_user.id == @user.id %>
-            <span class="x">✖️</span></p>
+            <%= link_to "✖️", destroy_path(useractivity), method: :delete, class: "x" %></p>
           <% end %>
         <p class="activity-description"><%= useractivity.activity.description.capitalize %></p>
       </div>
