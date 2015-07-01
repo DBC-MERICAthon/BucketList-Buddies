@@ -1,0 +1,18 @@
+.buddy-name {
+    display: flex;
+    width: 10em;
+    padding: 1em;
+
+}
+
+.buddy :hover{
+    color: #6b9fbf;
+}
+
+.activities-list {
+    border-bottom: 1px solid white;
+    padding: 1em;
+    margin-left: 12em;
+    margin-top: -3.1em;
+
+}
