@@ -13,7 +13,6 @@ require 'faker'
                name: Faker::Name.name,
                location: Faker::Address.state,
                blurb: Faker::Lorem.paragraph,
-               photo: 'profile_pic.png',
                password: 'temppass',
                email: Faker::Internet.email)
 end
