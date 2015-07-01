@@ -30,6 +30,7 @@
 .completed-activity {
   opacity: 0.5;
   text-decoration: line-through;
+  background-color: #CCCCCC
 }
 
 #new_activity {
