@@ -27,8 +27,9 @@
 .heart, .x, .check {
   margin: 0 0.5% 0 0.5%;
 }
-.strikethrough {
-  font-style:
+.completed-activity {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 
 #new_activity {

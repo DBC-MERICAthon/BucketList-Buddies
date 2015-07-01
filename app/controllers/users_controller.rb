@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = current_user
+    @user = User.where(id: params[:id]).first
     @completed_activities = []
     @noncompleted_activities = []
     user_activities = UserActivity.where(user_id: @user.id)
