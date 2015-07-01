@@ -1,0 +1,247 @@
+.bucket-list {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.title {
+  background-color: #0b1021;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.5em;
+  padding: 2%;
+}
+
+.activity {
+  border: 1px solid #ACB3BA;
+}
+
+.activity-name {
+  font-size: 1.2em;
+}
+
+.activity-description {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.heart, .x, .check {
+  margin: 0 0.5% 0 0.5%;
+}
+.completed-activity {
+  opacity: 0.5;
+  text-decoration: line-through;
+  background-color: #CCCCCC
+}
+
+#new_activity {
+  display: none;
+}
+/* FONTS */
+/*font-family: 'Ubuntu', sans-serif;
+font-family: 'Monofett', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;*/
+
+/* COLORS */
+/* dark blue #3e4b69 */
+/* light blue #6b9fbf */
+/* super dark blue #0b1021 */
+
+
+h1 {
+  font-size: 3em;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #0b1021;
+  margin: 0;
+  padding: 0;
+  /*background-color: rgba(67,121,155, 0.3);*/
+}
+
+a {
+  color: #3e4b69;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #6b9fbf;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
+button#add_activity {
+  height: 50px;
+  font-size: 1.2em;
+  margin: 2% 0 2% 0;
+}
+
+#match {
+  height: 50px;
+  font-size: 1.2em;
+  margin: 2% 0 2% 0;
+}
+
+form.new_activity {
+  margin: 2% 0 2% 0;
+}
+
+.main-container {
+  width: 80%;
+  margin-left: 10%;
+  min-height: 1000px;
+  margin-top: 1%;
+  /*background-color: rgba(255, 152, 0, 0.25);*/
+  position:relative;
+}
+
+.nav-bar {
+  background-color: white;
+  padding: 2% 2% 0 2%;
+  display: block;
+  margin: 0% 8%;
+}
+
+.login {
+  text-align: center;
+  line-height: 2em;
+  padding: 2%;
+  display: block;
+  padding-top: 15%;
+}
+
+.welcome {
+  float: right;
+  display: block;
+  margin-top: 3%;
+}
+
+.greeting {
+  display: block;
+  float: right;
+}
+
+.login-buttons {
+  background:rgba(255,255,255, 0.4);
+  border-radius: 25px;
+  width: 18%;
+  padding: 2% 1% 2% 1%;
+  margin-left: 40%;
+}
+
+.home-login-buttons {
+  font-size: 1.3em;
+}
+
+#messagesDiv {
+  width: 25%;
+  float: right;
+  /*display: block;*/
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+}
+
+.chat {
+  background-color: #FF9800;
+  color: white;
+  text-align: center;
+  padding: 1%;
+}
+
+.expand {
+  float: right;
+  margin-right: 2%;
+  font-size: 1.2em;
+}
+
+.chat-input-fields {
+  margin: 2%;
+  display: none;
+  min-height: 20%;
+}
+
+#nameInput {
+  width: 20%;
+  display: inline-block;
+}
+
+#messageInput {
+  width: 65%;
+}
+
+footer {
+    padding: 0 2% 2% 2%;
+  /*position: absolute;*/
+  bottom: 0;
+  height: 100px;
+  width: 96%;
+  display: block;
+  background-color: white;
+}
+
+.homepage {
+  background-image: url('clouds.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.homepage .nav-bar {
+  margin: 2% 0 !important;
+  padding-bottom: 1%;
+  opacity: .6;
+}
+
+.buddy-name {
+    display: flex;
+    width: 10em;
+    padding: 1em;
+
+}
+
+.buddy :hover{
+    color: #6b9fbf;
+}
+
+.activities-list {
+    border-bottom: 1px solid white;
+    padding: 1em;
+    margin-left: 12em;
+    margin-top: -3.1em;
+
+}
+.gravatar-pic img {
+  border-radius: 100px;
+  float: right;
+  display: block;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 20%;
+  margin: 0%;
+  float: left;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
