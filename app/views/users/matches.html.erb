@@ -1,0 +1,17 @@
+<div class="matches-list">
+  <div class="title">You match well with these folks:</div>
+
+  <% @users_with_activities.each do |user, activities| %>
+
+    <div class="buddy">
+      <div class="buddy-name"><%= link_to user.name, user_path(user) %> </div>
+
+      <div class="activities-list">
+        <% activities.each do |activity| %>
+          <%= link_to activity.name, activity_path(activity) %> , &nbsp;
+        <% end %>
+      </div>
+  <% end %>
+
+  </div>
+</div>
