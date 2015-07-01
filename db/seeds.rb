@@ -8,8 +8,39 @@
 
 require 'faker'
 
+User.create(username: "SNLSF",
+               name: "Steph",
+               location: "San Francisco",
+               blurb: "Curiosity has yet killed this cat!",
+               password: 'temppass',
+               email: "stephanielopez.sf@gmail.com")
+User.create(username: "icstunna",
+               name: "Mikhail",
+               location: "San Francisco",
+               blurb: "Give it to me straight.",
+               password: 'temppass',
+               email: "mdelostr@gmail.com")
+User.create(username: "Mikey",
+               name: "Mike",
+               location: "San Francisco",
+               blurb: "Resistance is futile.",
+               password: 'temppass',
+               email: "michaelmfarr@gmail.com")
+User.create(username: "Super_Yan",
+               name: "Miranda",
+               location: "San Jose, CA",
+               blurb: "I always have something to say.",
+               password: 'temppass',
+               email: "super.y4n@gmail.com")
+User.create(username: "miniyakkos",
+               name: "Ayako",
+               location: "San Francisco",
+               blurb: "Mahalo",
+               password: 'temppass',
+               email: "ayakokurushima@gmail.com")
+
 10.times do
-  User.create!(username: Faker::Internet.user_name,
+  User.create(username: Faker::Internet.user_name,
                name: Faker::Name.name,
                location: Faker::Address.state,
                blurb: Faker::Lorem.paragraph,
