@@ -12,6 +12,16 @@ class ActivitiesController < ApplicationController
   def update
   end
 
+  def create
+    @activity = Activity.new(name: params[:activity][:name],
+      description: params[:activity][:description]
+    )
+    if @activity.save
+      current_user.activities << @activity
+      redirect_to user_path(current_user)
+    end
+  end
+
   private
 
   # strong params
