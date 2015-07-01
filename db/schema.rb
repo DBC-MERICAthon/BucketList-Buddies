@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20150630213302) do
     t.string   "username"
     t.string   "location"
     t.text     "blurb"
-    t.string   "photo"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
