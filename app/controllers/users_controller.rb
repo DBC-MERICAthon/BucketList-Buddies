@@ -39,7 +39,7 @@ class UsersController < ApplicationController
         end
       end
     end
-
+    @users_with_activities.delete(@user)
   end
 
 end
