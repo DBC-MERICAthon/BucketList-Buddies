@@ -1,8 +1,18 @@
 class UsersController < ApplicationController
   def show
-    @user = current_user
-    @user_activities = @user.activities
+    @user = User.where(id: params[:id]).first
+    @completed_activities = []
+    @noncompleted_activities = []
+    user_activities = UserActivity.where(user_id: @user.id)
+    user_activities.each do |activity|
+      if activity.completed?
+        @completed_activities << activity
+      else
+        @noncompleted_activities << activity
+      end
+    end
     @activity = Activity.new
+
   end
 
   def main
