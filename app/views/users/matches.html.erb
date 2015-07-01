@@ -1,25 +1,23 @@
-<div class="matches-list">
+<div class="matches-container">
   <div class="title">You match well with these folks:</div>
-
-  <% @users_with_activities.each do |user, activities| %>
-
-    <div class="buddy">
-      <strong>
-      <div class="buddy-name"><%= link_to user.name, user_path(user) %>
-
-      </div>
-      </strong>
-      <div class="activities-list">
-
-        <% activities.each_with_index do |activity, index| %>
-          <%= link_to activity.name, activity_path(activity) %>
-          <%= if index != activities.size - 1 then
-                ","
-              end %>  &nbsp;
-        <% end %>
-
-      </div>
-  <% end %>
-
+  <div class="buddy-container">
+      <% @users_with_activities.each do |user, activities| %>
+        <div class="buddy-bar">
+          <div class="buddy-info">
+            <div class="buddy-pic">
+              <a href="/users/<%= user.id %>"><%= image_tag user.gravatar_url %></a>
+            </div>
+            <div class="buddy-name"><%= user.name %></div>
+            <div class="buddy-blurb"><%= user.blurb %></div>
+          </div>
+          <div class="activities-list">
+            <ul>
+              <% activities.each_with_index do |activity, index| %>
+                <li><%= link_to activity.name, activity_path(activity) %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
   </div>
 </div>
