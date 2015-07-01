@@ -1,5 +1,3 @@
-== README
-
 # Bucketlist Buddies
 
 Bucketlist Buddies connects you to people who share your aspirations.  Create your personal bucket list and then find your top matches.  If another's bucket list inspires you, add it to your bucket list too.
