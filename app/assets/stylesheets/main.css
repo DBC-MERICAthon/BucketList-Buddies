@@ -8,10 +8,6 @@ font-family: 'Ubuntu Condensed', sans-serif;*/
 /* light blue #6b9fbf */
 /* super dark blue #0b1021 */
 
-h1, h2 {
-  font-family: 'Monofett', cursive;
-}
-
 h1 {
   font-size: 3em;
 }
@@ -25,7 +21,6 @@ body {
 
 a {
   color: #3e4b69;
-  font-size: 1.3em;
   text-decoration: none;
 }
 
@@ -52,13 +47,43 @@ a:active {
   border: solid 1px red;
   background-color: white;
   padding: 2% 2% 0 2%;
+  display: block;
 }
 
 .login {
   border: solid 1px red;
   text-align: center;
-  line-height: 4em;
+  line-height: 2em;
   padding: 2%;
+  display: block;
+  padding-top: 15%;
+}
+
+.welcome {
+  float: right;
+  display: block;
+  margin-top: 3%;
+}
+
+.greeting {
+  display: block;
+  float: right;
+}
+
+.login-buttons {
+  background:rgba(255,255,255, 0.4);
+  border-radius: 25px;
+  width: 18%;
+  padding: 2% 1% 2% 1%;
+  margin-left: 40%;
+}
+
+.home-login-buttons {
+  font-size: 1.3em;
+}
+
+.bucket-list {
+  text-align: center;
 }
 
 footer {
@@ -68,4 +93,6 @@ footer {
   bottom: 0;
   height: 100px;
   width: 96%;
+  display: block;
+  background-color: white;
 }

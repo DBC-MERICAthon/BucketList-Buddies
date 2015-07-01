@@ -11,9 +11,7 @@
 <body>
   <div class="main-container">
     <%= render "partials/header" %>
-    <% if user_signed_in? %>
-      <%= image_tag current_user.gravatar_url %>
-    <% end %>
+
     <%= yield %>
     <%= render "partials/footer" %>
   </div>

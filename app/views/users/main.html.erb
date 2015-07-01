@@ -1,4 +1,6 @@
 <div class="login">
-  <%= link_to :login, new_user_session_path %><br>
-  <%= link_to :sign_up, new_user_registration_path %>
+  <div class="login-buttons">
+    <p class="home-login-buttons"><%= link_to "Log In", new_user_session_path %></p>
+    <p class="home-login-buttons"><%= link_to "Sign Up", new_user_registration_path %></p>
+  </div>
 </div>
