@@ -1,18 +1,55 @@
-.buddy-name {
-    display: flex;
-    width: 10em;
-    padding: 1em;
-
+.matches-container {
+  margin-bottom: 10%;
 }
 
-.buddy :hover{
-    color: #6b9fbf;
+.title {
+  text-align: center;
+}
+
+.buddy-container {
+  display: block;
+}
+
+.buddy-bar {
+  display: block;
+  border: 1px solid #ACB3BA;
+  padding: 2%;
+}
+
+.buddy-info {
+  display: inline-block;
+  width: 40%;
+  margin-left: 2%;
+  vertical-align: top;
+}
+
+.buddy-pic img {
+  display: block;
+  border-radius: 100px;
+}
+
+.buddy-name {
+  display: block;
+  margin-top: 3%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.buddy-blurb {
+  display: block;
 }
 
 .activities-list {
-    border-bottom: 1px solid white;
-    padding: 1em;
-    margin-left: 12em;
-    margin-top: -3.1em;
-
+  vertical-align: top;
+  display: inline-block;
+  margin: 0;
+  align-items: flex-start;
 }
+
+.activities-list li {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.3em;
+}
+
