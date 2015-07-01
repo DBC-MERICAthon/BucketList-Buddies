@@ -1,15 +1,9 @@
-<%= render "partials/header" %>
-
-<div class="profile">
-  <h1>Welcome, <%= @user.username %></h1>
-</div>
-
-<div class="bucket_list">
-  <h1>Bucket List:</h1>
+<div class="bucket-list">
+  <div class="title"><h2>Your bucket list:</h2></div>
   <% @user_activities.each do |activity| %>
     <div class="activity">
       <p><%= link_to activity.name, activity_path(activity) %></p>
-      <p><%= activity.description %></p>
+      <p><%= activity.description.capitalize %></p>
     </div>
   <% end %>
   <% if current_user.id == @user.id %>
