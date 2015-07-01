@@ -1,5 +1,13 @@
 <!-- https://www.firebase.com/tutorial/#gettingstarted -->
 <h1>I want to <%= @activity.name %></h1>
+<h3>Other users who have this on their bucket list:</h3>
+<ul>
+  <% @users.each do |user| %>
+    <%if user.activities.include?(@activity)%>
+      <li><%= user.name %></li>
+    <%end%>
+  <%end%>
+</ul>
 
 <div id='messagesDiv'></div>
 <input type='text' id='nameInput' placeholder='Name'>

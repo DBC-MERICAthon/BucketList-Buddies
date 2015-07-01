@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_activities
   has_many :activities, through: :user_activities
+
+  include Gravtastic
+  gravtastic
 end

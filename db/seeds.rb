@@ -8,14 +8,44 @@
 
 require 'faker'
 
+User.create(username: "SNLSF",
+               name: "Steph",
+               location: "San Francisco",
+               blurb: "Curiosity has yet killed this cat!",
+               password: 'temppass',
+               email: "stephanielopez.sf@gmail.com")
+User.create(username: "icstunna",
+               name: "Mikhail",
+               location: "San Francisco",
+               blurb: "Give it to me straight.",
+               password: 'temppass',
+               email: "mdelostr@gmail.com")
+User.create(username: "Mikey",
+               name: "Mike",
+               location: "San Francisco",
+               blurb: "Resistance is futile.",
+               password: 'temppass',
+               email: "michaelmfarr@gmail.com")
+User.create(username: "Super_Yan",
+               name: "Miranda",
+               location: "San Jose, CA",
+               blurb: "I always have something to say.",
+               password: 'temppass',
+               email: "super.y4n@gmail.com")
+User.create(username: "miniyakkos",
+               name: "Ayako",
+               location: "San Francisco",
+               blurb: "Mahalo",
+               password: 'temppass',
+               email: "ayakokurushima@gmail.com")
+
 10.times do
-  User.create!(username: Faker::Internet.user_name,
-            name: Faker::Name.name,
-            location: Faker::Address.state,
-            blurb: Faker::Lorem.paragraph,
-            photo: 'profile_pic.png',
-            password: 'temppass',
-            email: Faker::Internet.email)
+  User.create(username: Faker::Internet.user_name,
+               name: Faker::Name.name,
+               location: Faker::Address.state,
+               blurb: Faker::Lorem.paragraph,
+               password: 'temppass',
+               email: Faker::Internet.email)
 end
 
 Activity.create(name: 'Practice Meditation', description: Faker::Lorem.sentence)
@@ -50,3 +80,54 @@ Activity.create(name: 'Go on a Blind Date', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn an Instrument', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn a Martial Art', description: Faker::Lorem.sentence)
 Activity.create(name: 'Take up Dancing', description: Faker::Lorem.sentence)
+
+
+activities = [
+    'Practice Meditation',
+    'Reconnect with an Old Friend',
+    'Go on a Picnic',
+    'Fly Firstbin/ Class',
+    'Go Skydiving',
+    'Go on a Cruise',
+    'Travel to a Different Country',
+    'Visit a Castle',
+    'Learn a New Language',
+    'Achieve a Fitness Goal',
+    'Run a Marathon',
+    'Learn a New Sport',
+    'Scuba Dive',
+    'Climb a Mountain',
+    'Perform a Kind Act',
+    'Be a Mentor',
+    'Volunteer Work',
+    'Talk to a Stranger',
+    'Go on a Road Trip',
+    'Go Backpacking',
+    'Learn a New Craft',
+    'Write a Book',
+    'Conquer Biggest Fear',
+    'Learn Sign Language',
+    'Publish a Book',
+    'Own a Pet',
+    'Throw a Mega Party',
+    'Get a Makeover',
+    'Go on a Blind Date',
+    'Learn an Instrument',
+    'Learn a Martial Art',
+    'Take up Dancing']
+
+description = "Et voluptates et autem. Ut a eum minima placeat et"
+users = User.all
+users.each do |user|
+  temp_activities = activities.shuffle.take(8)
+  temp_activities.each do |activity|
+    act_object = Activity.create(name: activity, description: description.split(' ').shuffle.join(' '))
+    user.activities.push(act_object)
+
+# User.all.each do |user|
+#   10.times do
+#     offset = rand(Activity.count)
+#     user.activities << Activity.offset(offset).first
+
+  end
+end

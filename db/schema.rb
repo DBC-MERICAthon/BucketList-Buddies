@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150630213302) do
   create_table "activities", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "completed"
+    t.boolean  "completed",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20150630213302) do
     t.string   "username"
     t.string   "location"
     t.text     "blurb"
-    t.string   "photo"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
