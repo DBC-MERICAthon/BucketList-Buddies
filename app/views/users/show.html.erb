@@ -1,4 +1,5 @@
-<%= link_to :logout, destroy_user_session_path, method: :delete %>
+<%= render "partials/header" %>
+
 <div class="profile">
   <h1>Welcome, <%= @user.username %></h1>
   <img class="profile_pic" src=<%= @user.photo %>>
