@@ -25,4 +25,8 @@ $(document).ready(function() {
 
   });
 
+  $('.expand').on("click", function() {
+    $('.chat-input-fields').show();
+  });
+
 })
