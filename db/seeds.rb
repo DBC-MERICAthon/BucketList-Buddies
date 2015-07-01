@@ -8,7 +8,7 @@
 
 require 'faker'
 
-10.times do
+20.times do
   User.create!(username: Faker::Internet.user_name,
                name: Faker::Name.name,
                location: Faker::Address.state,
@@ -87,17 +87,17 @@ activities = [
     'Take up Dancing']
 
 description = "Et voluptates et autem. Ut a eum minima placeat et"
-users = User.all
-users.each do |user|
-  temp_activities = activities.shuffle.take(8)
-  temp_activities.each do |activity|
-    act_object = Activity.create(name: activity, description: description.split(' ').shuffle.join(' '))
-    user.activities.push(act_object)
+# users = User.all
+# users.each do |user|
+#   temp_activities = activities.shuffle.take(12)
+#   temp_activities.each do |activity|
+#     UserActivity.create(name: activity, description: description.split(' ').shuffle.join(' '))
+#   #  user.activities.create(name: activity, description: description.split(' ').shuffle.join(' '))
 
-# User.all.each do |user|
-#   10.times do
-#     offset = rand(Activity.count)
-#     user.activities << Activity.offset(offset).first
+User.all.each do |user|
+  10.times do
+    offset = rand(Activity.count)
+    user.activities << Activity.offset(offset).first
 
   end
 end
