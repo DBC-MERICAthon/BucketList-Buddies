@@ -4,7 +4,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :location
       t.text :blurb
-      t.string :photo
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
