@@ -13,6 +13,10 @@ h1 {
   font-size: 3em;
 }
 
+h3 {
+  color: #6b9fbf;
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #0b1021;
@@ -98,6 +102,11 @@ form.new_activity {
 .home-login-buttons {
   font-size: 1.3em;
 }
+
+/*.common-users ul li {
+  list-style-type: none;
+  font-size: 1.3em;
+}*/
 
 #messagesDiv {
   width: 25%;
