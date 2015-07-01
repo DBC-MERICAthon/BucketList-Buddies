@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @users = User.all
   end
 
   def edit
