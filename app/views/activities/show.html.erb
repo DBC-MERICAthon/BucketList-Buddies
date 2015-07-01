@@ -4,14 +4,18 @@
 <ul>
   <% @users.each do |user| %>
     <%if user.activities.include?(@activity)%>
-      <li><%= user.name %></li>
+      <li class="common-users"><%= link_to user.name, user_path(user) %></li>
     <%end%>
   <%end%>
 </ul>
 
 <div id='messagesDiv'>
-  <input type='text' id='nameInput' value='<%= current_user.name %>'>
-  <input type='text' id='messageInput' placeholder='Message'>
+  <div class="chat">Chat <div class="expand">+</div></div>
+  <div class="chat-input-fields">
+    <input type='text' id='nameInput' value='<%= current_user.name %>'>
+    <input type='text' id='messageInput' placeholder='Message'>
+  </div>
+
   <script>
     // We want to customize the reference url for each activity to enable group chat
     var myFirebaseRef = new Firebase("https://dbc-bucket-buddies.firebaseio.com/activities/<%= @activity.id %>");
