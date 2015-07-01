@@ -10,12 +10,12 @@ require 'faker'
 
 10.times do
   User.create!(username: Faker::Internet.user_name,
-            name: Faker::Name.name,
-            location: Faker::Address.state,
-            blurb: Faker::Lorem.paragraph,
-            photo: 'profile_pic.png',
-            password: 'temppass',
-            email: Faker::Internet.email)
+               name: Faker::Name.name,
+               location: Faker::Address.state,
+               blurb: Faker::Lorem.paragraph,
+               photo: 'profile_pic.png',
+               password: 'temppass',
+               email: Faker::Internet.email)
 end
 
 Activity.create(name: 'Practice Meditation', description: Faker::Lorem.sentence)
@@ -50,3 +50,10 @@ Activity.create(name: 'Go on a Blind Date', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn an Instrument', description: Faker::Lorem.sentence)
 Activity.create(name: 'Learn a Martial Art', description: Faker::Lorem.sentence)
 Activity.create(name: 'Take up Dancing', description: Faker::Lorem.sentence)
+
+User.all.each do |user|
+  10.times do
+    offset = rand(Activity.count)
+    user.activities << Activity.offset(offset).first
+  end
+end
