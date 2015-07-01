@@ -82,14 +82,11 @@ a:active {
   font-size: 1.3em;
 }
 
-.bucket-list {
-  text-align: center;
-}
 
 footer {
   border: solid 1px red;
   padding: 0 2% 2% 2%;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   height: 100px;
   width: 96%;
