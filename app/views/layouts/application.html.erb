@@ -8,10 +8,11 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Monofett|Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <div class="main-container">
-    <%= render "partials/header" %>
+<body class="<%= @home_page ? 'homepage' : ''%>">
 
+  <%= render "partials/header" %>
+
+  <div class="main-container">
     <%= yield %>
   </div>
 </body>
