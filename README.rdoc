@@ -1,13 +1,13 @@
-# Bucketlist Buddies
+==Bucketlist Buddies
 
 Bucketlist Buddies connects you to people who share your aspirations.  Create your personal bucket list and then find your top matches.  If another's bucket list inspires you, add it to your bucket list too.
 
-### Heroku link [here](https://bucketlist-buddies.herokuapp.com)
-### Contributors:
+Heroku link [here](https://bucketlist-buddies.herokuapp.com)
+Contributors:
   * Ayako @miniyakkos
   * Steph @SNLSF
   * Miranda @supery4n
   * Mike @iMikie
-### Built at DBC Hackathon
+Built at DBC Hackathon
 
 
