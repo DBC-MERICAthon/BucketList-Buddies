@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-  def index
+  def show
     @user = current_user
+    @user_activities = @user.activities
+    @activity = Activity.new
   end
 
   def main
