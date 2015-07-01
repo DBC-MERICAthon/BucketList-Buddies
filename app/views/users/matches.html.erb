@@ -4,12 +4,20 @@
   <% @users_with_activities.each do |user, activities| %>
 
     <div class="buddy">
-      <div class="buddy-name"><%= link_to user.name, user_path(user) %> </div>
+      <strong>
+      <div class="buddy-name"><%= link_to user.name, user_path(user) %>
 
+      </div>
+      </strong>
       <div class="activities-list">
-        <% activities.each do |activity| %>
-          <%= link_to activity.name, activity_path(activity) %> , &nbsp;
+
+        <% activities.each_with_index do |activity, index| %>
+          <%= link_to activity.name, activity_path(activity) %>
+          <%= if index != activities.size - 1 then
+                ","
+              end %>  &nbsp;
         <% end %>
+
       </div>
   <% end %>
 
