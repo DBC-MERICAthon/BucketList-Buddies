@@ -1,3 +1,41 @@
+.bucket-list {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.title {
+  background-color: #0b1021;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.5em;
+  padding: 2%;
+}
+
+.activity {
+  border: 1px solid #ACB3BA;
+}
+
+.activity-name {
+  font-size: 1.2em;
+}
+
+.activity-description {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.heart, .x, .check {
+  margin: 0 0.5% 0 0.5%;
+}
+.completed-activity {
+  opacity: 0.5;
+  text-decoration: line-through;
+  background-color: #CCCCCC
+}
+
+#new_activity {
+  display: none;
+}
 /* FONTS */
 /*font-family: 'Ubuntu', sans-serif;
 font-family: 'Monofett', cursive;
@@ -9,12 +47,9 @@ font-family: 'Ubuntu Condensed', sans-serif;*/
 /* super dark blue #0b1021 */
 /* gold #FF9800 */
 
+
 h1 {
   font-size: 3em;
-}
-
-h3 {
-  color: #6b9fbf;
 }
 
 body {
@@ -103,11 +138,6 @@ form.new_activity {
   font-size: 1.3em;
 }
 
-/*.common-users ul li {
-  list-style-type: none;
-  font-size: 1.3em;
-}*/
-
 #messagesDiv {
   width: 25%;
   float: right;
@@ -166,4 +196,90 @@ footer {
   padding-bottom: 1%;
   opacity: .6;
 }
+
+.matches-container {
+  margin-bottom: 10%;
+}
+
+.title {
+  text-align: center;
+}
+
+.buddy-container {
+  display: block;
+}
+
+.buddy-bar {
+  display: block;
+  border: 1px solid #ACB3BA;
+  padding: 2%;
+}
+
+.buddy-info {
+  display: inline-block;
+  width: 40%;
+  margin-left: 2%;
+  vertical-align: top;
+}
+
+.buddy-pic img {
+  display: block;
+  border-radius: 100px;
+}
+
+.buddy-name {
+  display: block;
+  margin-top: 3%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.buddy-blurb {
+  display: block;
+}
+
+.activities-list {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.activities-list li {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.3em;
+}
+
+.gravatar-pic img {
+  border-radius: 100px;
+  float: right;
+  display: block;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 20%;
+  margin: 0%;
+  float: left;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
 

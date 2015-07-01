@@ -75,11 +75,19 @@ Activity.create(name: 'Throw a Mega Party', description: 'Make sure to have a bu
 Activity.create(name: 'Get a Makeover', description: 'And take a selfie!')
 Activity.create(name: 'Learn an Instrument', description: 'Bethooven Symphony 15?')
 
+activities = Activity.all
+
+# User.all.each do |user|
+#   selected = []
+#   9.times do
+#     selected << (activities - selected).sample
+#   end
+#   user.activities << selected
+# end
 
 User.all.each do |user|
-  10.times do
-    offset = rand(Activity.count)
-    user.activities << Activity.offset(offset).first
-
-  end
+  selected = []
+  selected << (activities - selected).sample(10)
+  user.activities << selected
 end
+
