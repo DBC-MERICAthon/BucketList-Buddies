@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def main
+    @home_page = true
   end
 
   def matches
