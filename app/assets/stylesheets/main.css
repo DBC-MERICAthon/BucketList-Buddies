@@ -19,6 +19,8 @@ h1 {
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #0b1021;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -35,4 +37,35 @@ a:hover {
 /* selected link */
 a:active {
   color: #0000FF;
+}
+
+.main-container {
+  border: solid 1px red;
+  width: 80%;
+  margin-left: 10%;
+  min-height: 1000px;
+  background-color: rgba(67,121,155, 0.3);
+  position:relative;
+}
+
+.nav-bar {
+  border: solid 1px red;
+  background-color: white;
+  padding: 2% 2% 0 2%;
+}
+
+.login {
+  border: solid 1px red;
+  text-align: center;
+  line-height: 4em;
+  padding: 2%;
+}
+
+footer {
+  border: solid 1px red;
+  padding: 0 2% 2% 2%;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 96%;
 }

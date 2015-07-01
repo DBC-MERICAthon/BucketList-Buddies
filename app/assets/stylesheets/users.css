@@ -7,17 +7,12 @@
   border: 1px red dotted;
 }
 
-.nav_bar {
-  display: inline-block;
-  background-color: gray;
-}
-
 .logo {
   display: inline-block;
 }
 
 .logo img {
-  height: 10%;
-  width: 10%;
+  height: 20%;
   margin: 0%;
+  float: left;
 }

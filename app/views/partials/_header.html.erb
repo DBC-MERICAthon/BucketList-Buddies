@@ -1,8 +1,5 @@
-<header class="nav_bar">
-  <div class="logo">
-    <img src="http://images.clipartpanda.com/bucket-clipart-l_02.gif">
-    <h2>Bucket Buddy</h2>
-  </div>
+<header class="nav-bar">
+  <div class="logo"><%= image_tag "LOGO.png" %></div>
   <% if current_user %>
     <%= link_to :logout, destroy_user_session_path, method: :delete %>
   <% end %>
