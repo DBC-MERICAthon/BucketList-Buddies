@@ -1,0 +1,25 @@
+<div class="matches-list">
+  <div class="title">You match well with these folks:</div>
+
+  <% @users_with_activities.each do |user, activities| %>
+
+    <div class="buddy">
+      <strong>
+      <div class="buddy-name"><%= link_to user.name, user_path(user) %>
+
+      </div>
+      </strong>
+      <div class="activities-list">
+
+        <% activities.each_with_index do |activity, index| %>
+          <%= link_to activity.name, activity_path(activity) %>
+          <%= if index != activities.size - 1 then
+                ","
+              end %>  &nbsp;
+        <% end %>
+
+      </div>
+  <% end %>
+
+  </div>
+</div>
