@@ -16,6 +16,14 @@
   border: 1px solid #ACB3BA;
 }
 
+.activity-name {
+  font-size: 1.2em;
+}
+
+.activity-description {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
 #new_activity {
   display: none;
 }
