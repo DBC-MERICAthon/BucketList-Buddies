@@ -1,0 +1,38 @@
+/* FONTS */
+/*font-family: 'Ubuntu', sans-serif;
+font-family: 'Monofett', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;*/
+
+/* COLORS */
+/* dark blue #3e4b69 */
+/* light blue #6b9fbf */
+/* super dark blue #0b1021 */
+
+h1, h2 {
+  font-family: 'Monofett', cursive;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #0b1021;
+}
+
+a {
+  color: #3e4b69;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #6b9fbf;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
