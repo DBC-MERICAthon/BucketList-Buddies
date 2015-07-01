@@ -1,0 +1,28 @@
+<%= link_to :logout, destroy_user_session_path, method: :delete %>
+<div class="profile">
+  <h1>Welcome, <%= @user.username %></h1>
+  <img class="profile_pic" src=<%= @user.photo %>>
+</div>
+
+<div class="bucket_list">
+  <h1>Bucket List:</h1>
+  <% @user_activities.each do |activity| %>
+    <div class="activity">
+      <p><%= link_to activity.name, activity_path(activity) %></p>
+      <p><%= activity.description %></p>
+    </div>
+  <% end %>
+  <% if current_user.id == @user.id %>
+    <button id="add_activity">Add item</button>
+
+    <%= form_for @activity, url: activities_path do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+</div>
